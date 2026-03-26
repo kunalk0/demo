@@ -1,0 +1,189 @@
+:root {
+  --green: #045a3f;
+  --dark: #044532;
+  --gold: #d6ae57;
+  --text: #123529;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Montserrat, sans-serif;
+  color: var(--text);
+  background: #fff;
+}
+.container { width: min(1280px, 96vw); margin: 0 auto; }
+
+.header {
+  background: linear-gradient(90deg, #02513a 0%, #036047 65%, #04563f 100%);
+  border-bottom: 1px solid rgba(255,255,255,.25);
+}
+.nav {
+  height: 88px;
+  display: grid;
+  grid-template-columns: 290px 1fr auto;
+  align-items: center;
+  gap: 24px;
+}
+.logo img { width: 250px; max-height: 66px; object-fit: contain; display: block; }
+
+.links { display: flex; gap: 34px; justify-content: center; }
+.links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 31px;
+}
+.links .active { color: var(--gold); }
+
+.toolbar { display: flex; align-items: center; }
+.search {
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-right: 8px;
+}
+.search input {
+  border: 0;
+  width: 260px;
+  padding: 12px 14px;
+  font-size: 16px;
+}
+.search button {
+  border: 0;
+  width: 56px;
+  font-size: 22px;
+  color: #8a680f;
+}
+.tb {
+  border: 0;
+  background: #fff;
+  width: 58px;
+  height: 54px;
+  font-size: 25px;
+}
+.cart {
+  background: var(--gold);
+  position: relative;
+}
+.cart span {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #0d6948;
+  color: #fff;
+  font-size: 12px;
+  display: grid;
+  place-items: center;
+}
+
+.page { background: #fff; }
+.top-split {
+  display: grid;
+  grid-template-columns: 1.03fr .97fr;
+}
+.hero {
+  min-height: 465px;
+  background-image: linear-gradient(to top, rgba(0,0,0,.22), rgba(0,0,0,.08)),
+    url('https://brahmanathpharma.com/img/slide4.webp');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  left: 58px;
+  bottom: 80px;
+}
+.overlay h1 {
+  margin: 0 0 20px;
+  color: #e2c56f;
+  line-height: 1.15;
+  font-size: 28px;
+  letter-spacing: .5px;
+}
+.cta {
+  display: inline-block;
+  background: #005a3f;
+  color: #f1d07a;
+  text-decoration: none;
+  border: 2px solid #c8a047;
+  border-radius: 10px;
+  padding: 12px 40px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.right-col { padding: 28px 24px; }
+.cats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.cat {
+  border: 2px solid #5c8b74;
+  border-radius: 14px;
+  min-height: 126px;
+  display: grid;
+  place-items: center;
+  background: #fff;
+}
+.cat span { font-size: 38px; line-height: 1; }
+.cat h3 { margin: 4px 0 0; font-size: 20px; }
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 26px;
+}
+.card {
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.09);
+  padding: 12px;
+}
+.card img {
+  width: 100%;
+  height: 166px;
+  object-fit: contain;
+  border-radius: 6px;
+  background: #fafafa;
+}
+.card h4 { margin: 11px 0 6px; font-size: 17px; }
+.price { margin: 0; font-size: 16px; font-weight: 700; }
+.stars { margin: 4px 0 8px; color: #d0a025; font-size: 16px; letter-spacing: 1px; }
+.card button {
+  width: 100%;
+  border: 0;
+  background: #025e45;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 8px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.lower { padding: 14px 0 28px; }
+.lower-cats { max-width: 640px; }
+.lower-products { max-width: 640px; }
+.simple h4 { margin: 10px 0 0; }
+.trust {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+  color: #0a5f44;
+  font-weight: 700;
+  font-size: 19px;
+}
+
+@media (max-width: 1100px) {
+  .nav { grid-template-columns: 1fr; height: auto; padding: 12px 0; }
+  .links, .toolbar { justify-content: flex-start; flex-wrap: wrap; }
+  .top-split { grid-template-columns: 1fr; }
+}
